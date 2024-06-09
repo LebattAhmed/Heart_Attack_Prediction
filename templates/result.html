@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>The model predicts: {{ prediction }}</p>
+    {% if prediction == 0 %}
+    <p>Less likely to have a heart attack.</p>
+    {% elif prediction == 1 %}
+    <p>More likely to have a heart attack.</p>
+    {% else %}
+    <p>Unknown result.</p>
+    {% endif %}
+    
+
+
+    <button><a href="/">Return</a></button>
+
+</body>
+</html>

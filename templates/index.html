@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Formulary</title>
+</head>
+<body>
+
+    <form action="/predict" method="post">
+        <!-- Age -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <!-- Sex -->
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+            <option value="1">masculine</option>
+            <option value="0">feminine</option>
+        </select>
+
+        <!-- Chest Pain Type -->
+        <label for="cp">Type of chest pain:</label>
+        <select id="cp" name="cp" required>
+            <option value="1">Typical angina</option>
+            <option value="2">Atypical angina</option>
+            <option value="3">Non-anginal chest pain</option>
+            <option value="4">Asymptomatic</option>
+        </select>
+
+        <label for="trestbps">Resting blood pressure:</label>
+        <input type="number" id="trestbps" name="trestbps" required>
+
+        <!-- Cholesterol -->
+        <label for="chol">Cholesterol:</label>
+        <input type="number" id="chol" name="chol" required>
+
+        <label for="fbs">Fasting blood sugar:</label>
+        <select id="fbs" name="fbs" required>
+            <option value="1">More than 120mg/dl</option>
+            <option value="0">Less than or equal to 120mg/dl</option>
+        </select>
+
+        <label for="restecg">Resting electrocardiographic results:</label>
+        <select id="restecg" name="restecg" required>
+            <option value="0">Normal</option>
+            <option value="1">ST-T wave abnormality (T wave inversions and/or elevation or depression of > 0.05mV)</option>
+            <option value="2"> Probable or definite left ventricular hypertrophy according to Estes' criteria</option>
+        </select>
+
+        <label for="thalach">Maximum heart rate achieved </label>
+        <input type="number" id="thalach" name="thalach" required>
+
+        <label for="exang">Exercise-induced angina (exang):</label>
+        <select id="exang" name="exang" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <!-- Oldpeak -->
+        <label for="oldpeak">Oldpeak:</label>
+        <input type="number" id="oldpeak" name="oldpeak" step="0.1" required>
+
+        <!-- Slope -->
+        <label for="slope">Slope:</label>
+        <input type="number" id="slope" name="slope" required max="2" min="0">
+
+        <label for="ca"> Number of major vessels (ca) :</label>
+        <input type="number" id="ca" name="ca" required max="3" min="0">
+
+        <!-- Thall -->
+        <label for="thal">Thall:</label>
+        <input type="number" id="thal" name="thal" required max="3" min="0">
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 560px;
+        height: 100%;
+    }
+
+    h1{
+        margin-top: 0;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</html>
